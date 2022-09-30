@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vendor and Order Tracker</title>
+  </head>
+  <body>
+    <form action="/vendors/@Model.Id/orders" method="post">
+      <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+      <label for="orderTitle">Order title</label>
+      <input id="orderTitle" name="orderTitle" type="text">
+      <button type='submit'>Add order</button>
+    </form>
+  </body>
+</html>
