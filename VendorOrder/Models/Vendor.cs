@@ -8,7 +8,7 @@ namespace VendorOrder.Models
     public string Name { get; set; }
     public string Description { get; set; }
     public int Id { get; }
-    // public List<Item> Items { get; set; }
+    public List<Order> Orders { get; set; }
 
     public Vendor(string vendorName, string description)
     {
@@ -16,7 +16,7 @@ namespace VendorOrder.Models
       Description = description;
       _instances.Add(this);
       Id = _instances.Count;
-      // Items = new List<Item>{};
+      Orders = new List<Order>{};
     }
 
     public static void ClearAll()
@@ -34,9 +34,9 @@ namespace VendorOrder.Models
       return _instances[searchId-1];
     }
 
-//     public void AddItem(Item item)
-//     {
-//       Items.Add(item);
-//     }
+    public void AddOrder(Order order)
+    {
+      Orders.Add(order);
+    }
   }
 }
