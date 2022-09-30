@@ -31,10 +31,10 @@ namespace VendorOrder.Models
       _instances.Clear();
     }
 
-    // public static Item Find(int searchId)
-    // {
-    //   return _instances[searchId-1];
-    // }
+    public static Order Find(int searchId)
+    {
+      return _instances[searchId-1];
+    }
 
   }
 }
