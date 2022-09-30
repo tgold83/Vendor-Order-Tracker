@@ -126,5 +126,24 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(updatedDescription, result);
     }
+
+    [TestMethod]
+    public void SetPrice_SetPrice_Int()
+    {
+      //Arrange
+      string title = "Bread";
+      string description = "20 loaves";
+      int price = 30;
+      int date = 11-03-22;
+      Order newOrder = new Order(title, description, price, date);
+
+      //Act
+      int updatedPrice = 10;
+      newOrder.Price = updatedPrice;
+      int result = newOrder.Price;
+
+      //Assert
+      Assert.AreEqual(updatedPrice, result);
+    }
   }
 }
