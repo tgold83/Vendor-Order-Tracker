@@ -84,5 +84,23 @@ namespace VendorOrder.Tests
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void Find_ReturnsCorrectVendor_Vendor()
+    {
+      //Arrange
+      string name01 = "Michael's";
+      string description01 = "Pizza Parlor";
+      string name02 = "JoAnne's";
+      string description02 = "Fabric Store";
+      Vendor newVendor1 = new Vendor(name01, description01);
+      Vendor newVendor2 = new Vendor(name02, description02);
+
+      //Act
+      Vendor result = Vendor.Find(2);
+
+      //Assert
+      Assert.AreEqual(newVendor2, result);
+    }
   }
 }
