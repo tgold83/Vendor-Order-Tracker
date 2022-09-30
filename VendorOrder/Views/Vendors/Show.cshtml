@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vendor and Order Tracker</title>
+  </head>
+  <body>
+    @using VendorOrder.Models;
+
+    <h3>Here are all the orders for this vendor:</h3>
+
+    <ol>
+    @foreach (Order order in @Model["orders"])
+    {
+      <li><a href='/vendors/@Model["vendor"].Id/orders/@order.Id'>@order.Title</a></li>
+        <ul>
+          <li>Order Description: @order.Description()</li>
+          <li>Order Cost: $@order.Price()</li>
+          <li>Order Date: @order.Date</li>
+        </ul>
+    }
+    </ol>
+
+    <p><a href='/vendors/@Model["vendor"].Id/orders/new'>Add a new order</a></p>
+    <p><a href='/vendors'>Return to the list of vendors</a></p>
+    <p><a href='/'>Return to Main Page</a></p>
+  </body>
+</html>
