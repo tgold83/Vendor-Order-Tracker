@@ -88,5 +88,24 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(date, result);
     }
+
+    [TestMethod]
+    public void SetTitle_SetTitle_String()
+    {
+      //Arrange
+      string title = "Bread";
+      string description = "20 loaves";
+      int price = 30;
+      int date = 11-03-22;
+      Order newOrder = new Order(title, description, price, date);
+
+      //Act
+      string updatedTitle = "French Bread";
+      newOrder.Title = updatedTitle;
+      string result = newOrder.Title;
+
+      //Assert
+      Assert.AreEqual(updatedTitle, result);
+    }
   }
 }
