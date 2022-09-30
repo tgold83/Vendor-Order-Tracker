@@ -107,5 +107,24 @@ namespace VendorOrder.Tests
       //Assert
       Assert.AreEqual(updatedTitle, result);
     }
+
+    [TestMethod]
+    public void SetDescription_SetDescription_String()
+    {
+      //Arrange
+      string title = "Bread";
+      string description = "20 loaves";
+      int price = 30;
+      int date = 11-03-22;
+      Order newOrder = new Order(title, description, price, date);
+
+      //Act
+      string updatedDescription = "10 loaves";
+      newOrder.Description = updatedDescription;
+      string result = newOrder.Description;
+
+      //Assert
+      Assert.AreEqual(updatedDescription, result);
+    }
   }
 }
