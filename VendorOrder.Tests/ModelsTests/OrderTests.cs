@@ -17,7 +17,7 @@ namespace VendorOrder.Tests
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
-      Order newOrder = new Order("test", "testing", 15, 11-03-21);
+      Order newOrder = new Order("test", "testing", 15, "11-03-21");
       Assert.AreEqual(typeof(Order), newOrder.GetType());
     }
 
@@ -28,7 +28,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
 
       //Act
       Order newOrder = new Order(title, description, price, date);
@@ -45,7 +45,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
 
       //Act
       Order newOrder = new Order(title, description, price, date);
@@ -62,7 +62,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
 
       //Act
       Order newOrder = new Order(title, description, price, date);
@@ -79,11 +79,11 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
 
       //Act
       Order newOrder = new Order(title, description, price, date);
-      int result = newOrder.Date;
+      string result = newOrder.Date;
 
       //Assert
       Assert.AreEqual(date, result);
@@ -96,7 +96,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
       Order newOrder = new Order(title, description, price, date);
 
       //Act
@@ -115,7 +115,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
       Order newOrder = new Order(title, description, price, date);
 
       //Act
@@ -134,7 +134,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
       Order newOrder = new Order(title, description, price, date);
 
       //Act
@@ -153,13 +153,13 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
       Order newOrder = new Order(title, description, price, date);
 
       //Act
-      int updatedDate = 10-03-22;
+      string updatedDate = "10-03-22";
       newOrder.Date = updatedDate;
-      int result = newOrder.Date;
+      string result = newOrder.Date;
 
       //Assert
       Assert.AreEqual(updatedDate, result);
@@ -185,11 +185,11 @@ namespace VendorOrder.Tests
       string title01 = "Bread";
       string description01 = "20 loaves";
       int price01 = 30;
-      int date01 = 11-03-22;
+      string date01 = "11-03-22";
       string title02 = "Pastry";
       string description02 = "croisants";
       int price02 = 15;
-      int date02 = 11-03-22;
+      string date02 = "11-03-22";
       Order newOrder1 = new Order(title01, description01, price01, date01);
       Order newOrder2 = new Order(title02, description02, price02, date02);
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
@@ -208,7 +208,7 @@ namespace VendorOrder.Tests
       string title = "Bread";
       string description = "20 loaves";
       int price = 30;
-      int date = 11-03-22;
+      string date = "11-03-22";
       Order newOrder = new Order(title, description, price, date);
 
       //Act
@@ -225,11 +225,11 @@ namespace VendorOrder.Tests
       string title01 = "Bread";
       string description01 = "20 loaves";
       int price01 = 30;
-      int date01 = 11-03-22;
+      string date01 = "11-03-22";
       string title02 = "Pastry";
       string description02 = "croisants";
       int price02 = 15;
-      int date02 = 11-03-22;
+      string date02 = "11-03-22";
       Order newOrder1 = new Order(title01, description01, price01, date01);
       Order newOrder2 = new Order(title02, description02, price02, date02);
 
